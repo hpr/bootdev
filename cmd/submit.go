@@ -47,7 +47,7 @@ func submissionHandler(cmd *cobra.Command, args []string) error {
 
 	data := lesson.Lesson.LessonDataCLI.CLIData
 
-	isAllowedOS := false
+	isAllowedOS := true
 	for _, system := range data.AllowedOperatingSystems {
 		if system == runtime.GOOS {
 			isAllowedOS = true
